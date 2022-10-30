@@ -1,0 +1,59 @@
+@media (max-width: 768px) {
+    .containerGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "header header"
+            "main main "
+            "footer footer";
+    }
+
+    header img {
+        grid-column: 1 /1;
+        grid-row: 1 / 1;
+        height: 100px;
+        width: 100px;
+    }
+
+    .barraNav {
+        grid-column: 2 /3;
+        grid-row: 1 / 1;
+        font-size: small;
+        gap: 5%;
+        margin-right: 10%;
+
+    }
+
+    main {
+        grid-area: main;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        h1 {
+            grid-area: main;
+            grid-column: 1/2;
+            grid-row: 2/2;
+
+        }
+
+        h2 {
+            grid-area: main;
+            grid-column: 2/2;
+            grid-row: 2 /2;
+        }
+    }
+
+    .encabezadosPage {
+        grid-area: main;
+        grid-column: 1/2;
+        grid-row: 1 /1;
+    }
+
+    .parrafosGral {
+        grid-area: main;
+        grid-column: 1/2;
+        grid-row: 2/2;
+        margin-left: 5%;
+
+    }
+}

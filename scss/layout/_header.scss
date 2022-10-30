@@ -1,0 +1,33 @@
+header {
+    color: rgb(247, 207, 159);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.barraNav {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 30px;
+    font-size: 2, 5rem;
+    margin: 50px;
+    li a{
+        list-style: none;
+        text-decoration: none;
+        color: rgb(5, 5, 5);
+        font-size: 150%;
+        :hover {
+            color: antiquewhite
+    }}
+}
+header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    list-style: none;
+    grid-column: 1/4;
+    grid-row: 1/1;
+}
