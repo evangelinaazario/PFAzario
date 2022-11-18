@@ -19,14 +19,12 @@
             height: 100px;
             width: 100px;
         }
-    }
 
     .barraNav {
         flex-direction: column;
         align-items: flex-end;
         background: unset;
-    }
-}
+    }}
 
 main {
     grid-area: main;
@@ -41,14 +39,23 @@ main {
     h2 {grid-area: main;
         display: grid;
         grid-column: 1/2;
-        grid-row: 2/2;
+        grid-row: 1/2;
     }
+.img{
+max-width: 80px;
+max-height: 80px;
+}}
 
-}
 
 footer {
     grid-area: footer;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+    .redes-sociales{
+        grid-column: 1/2;
+        grid-row: 2/2;
+     h4{grid-column: 1/1;
+        grid-row: 1/1;
 
-}
+     }   
+    }}}

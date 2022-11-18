@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/d1a49d175a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -25,17 +26,19 @@
                 </ul>
             </nav>
         </header>
-
+<main>
         <section class="contacto">
             <article>
-                <h3>CONTACTANOS</h3>
+                <h3 class="encabezadosPage">CONTACTANOS</h3>
                 <ul>
                     <li>Nuestras dirección:Maipu 65, Concepcion del Uruguay, Entre Rios</li>
                     <li> Email: symbiosisconsultora@gmail.com</li>
                     <li>Tel: 03442-155000000</li>
                 </ul>
             </article>
-            <input type="button" value="Contactanos por Whatsapp">
+            <form action="https://api.whatsapp.com/send?phone=5493442464785">
+                <input type="submit" value="Consultanos" />
+            </form>
         </section>
         <form class="contacto">
             <fieldset>
@@ -48,8 +51,17 @@
                 </select> <br><br> <input type="submit" value="Enviar">
             </fieldset>
         </form>
+    </main>
         <footer class="container-fluid">
-            <p>CONTACTANOS 03442 1550005050</p>
+            <h4 class="encabezadosPages">CONTACTÁ CON SYMBIOSIS:</h4>
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/"class="boton-face"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/symbiosis.consultora/?utm_medium=copy_link" class="boton-ig"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/symbiosisconsultora/" class="boton-linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5493442464785" class="boton-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+                <p class="copy">2022 Azario Evangelina todos los derechos reservados</p>
            
         </footer>
     </div>

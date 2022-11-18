@@ -9,62 +9,58 @@
   height: 100vh;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "header header header  " "main main main " "main main main " "footer footer footer";
-  background-image: url(../assets/img/imagen/SL_060521_43530_09.jpg); }
-
-.encabezadosPage {
-  color: black;
-  font-style: italic;
-  font-size: 250%;
-  justify-content: center;
-  grid-area: main;
-  grid-column: 1/2;
-  grid-row: 1 /1;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10%; }
-
-.encabezadosPage {
-  -webkit-animation: focus-in-expand-fwd 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: focus-in-expand-fwd 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
-
-.parrafosGral {
-  font-style: italic;
-  font-size: 130%;
-  color: black;
-  grid-area: main;
-  grid-column: 1/2;
-  grid-row: 2/2;
-  margin-left: 5%; }
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  background-image: url(/assets/img/imagen/1237oki.jpeg); }
 
 main {
   grid-area: main;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column: 1/4;
-  grid-row: 2/3; }
-  main h1 {
-    grid-area: main;
-    grid-column: 1 /3;
-    grid-row: 1 / 1;
-    justify-items: right;
-    align-self: center;
-    color: #fdb00a;
-    position: relative;
-    left: 30%;
-    font-size: 180%; }
+  grid-template-rows: repeat(2, 1fr); }
   main h2 {
     grid-area: main;
     grid-column: 2/3;
-    grid-row: 2 /3;
+    grid-row: 2 /2;
     justify-items: right;
     align-self: center;
-    color: #fdb00a;
+    color: #f87800;
     position: relative;
-    left: 30%;
+    left: 10%;
     font-style: italic;
-    font-size: 180%; }
+    font-size: 250%; }
+  main .marcaAgua {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    grid-area: main;
+    grid-column: 2/3;
+    grid-row: 1/1; }
+  main .encabezadosPage {
+    grid-area: main;
+    color: black;
+    font-size: 250%;
+    justify-content: center;
+    grid-area: main;
+    grid-column: 2/2;
+    grid-row: 1 /1;
+    justify-content: center;
+    align-items: center;
+    margin: 10px; }
+  main .encabezadosPage {
+    -webkit-animation: focus-in-expand-fwd 2s cubic-bezier(0.2, 0.46, 0.45, 0.94) both;
+    animation: focus-in-expand-fwd 2s cubic-bezier(0.2, 0.46, 0.45, 0.94) both; }
+  main .parrafosGral {
+    font-style: italic;
+    font-size: 130%;
+    color: black;
+    display: grid;
+    grid-area: main;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin-left: 5%;
+    justify-content: right;
+    align-items: flex-start; }
 
 header {
   color: #f7cf9f;
@@ -73,10 +69,10 @@ header {
   flex-wrap: nowrap; }
 
 .barraNav {
-  list-style: none;
   display: flex;
   justify-content: right;
   align-items: center;
+  list-style: none;
   gap: 30px;
   font-size: 2, 5rem;
   margin: 50px; }
@@ -94,7 +90,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   list-style: none;
-  grid-column: 1/4;
+  grid-column: 1/3;
   grid-row: 1/1; }
 
 .servicios {
@@ -115,17 +111,73 @@ header {
   grid-template-rows: repeat(6, 1fr);
   justify-content: center; }
 
+.fotoNosotros {
+  display: grid;
+  grid-area: main;
+  grid-column: 1/1;
+  grid-row: 1/3;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10px; }
+
 footer {
   grid-area: footer;
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   justify-content: center;
-  background-color: #ee5902;
-  bottom: 0;
-  color: #0e0d0d;
+  background-image: url(../assets/img/imagen/SL_060521_43530_09.jpg);
+  color: #0f0e0e;
   background-size: 100% auto;
-  min-height: 10vh;
-  grid-column: 1/4;
-  grid-row: 3/3; }
+  bottom: 0;
+  color: #0f0e0e;
+  background-size: 100% auto;
+  min-width: none; }
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1; }
+
+.copy {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  display: flex;
+  justify-content: center; }
+
+h4 {
+  margin-top: 10px;
+  margin: 20px;
+  border: 10px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  color: white;
+  font-style: oblique; }
+
+.boton-face {
+  color: white;
+  padding: 10px;
+  margin: 15px; }
+
+.boton-ig {
+  color: white;
+  padding: 10px;
+  margin: 15px; }
+
+.boton-linkedin {
+  color: white;
+  padding: 10px;
+  margin: 15px; }
+
+.boton-whatsapp {
+  color: white;
+  padding: 10px;
+  margin: 15px; }
 
 @-webkit-keyframes focus-in-expand-fwd {
   0% {
@@ -171,30 +223,37 @@ footer {
       grid-row: 1 / 1;
       height: 100px;
       width: 100px; }
-  .barraNav {
-    flex-direction: column;
-    align-items: flex-end;
-    background: unset; } }
-
-main {
-  grid-area: main;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr); }
-  main h1 {
+    header .barraNav {
+      flex-direction: column;
+      align-items: flex-end;
+      background: unset; }
+  main {
     grid-area: main;
-    display: grid;
-    grid-column: 1 /2;
-    grid-row: 1/ 1; }
-  main h2 {
-    grid-area: main;
-    display: grid;
-    grid-column: 1/2;
-    grid-row: 2/2; }
-
-footer {
-  grid-area: footer;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr; }
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); }
+    main h1 {
+      grid-area: main;
+      display: grid;
+      grid-column: 1 /2;
+      grid-row: 1/ 1; }
+    main h2 {
+      grid-area: main;
+      display: grid;
+      grid-column: 1/2;
+      grid-row: 1/2; }
+    main .img {
+      max-width: 80px;
+      max-height: 80px; }
+  footer {
+    grid-area: footer;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr; }
+    footer .redes-sociales {
+      grid-column: 1/2;
+      grid-row: 2/2; }
+      footer .redes-sociales h4 {
+        grid-column: 1/1;
+        grid-row: 1/1; } }
 
 @media (max-width: 768px) {
   .containerGrid {
