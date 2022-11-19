@@ -18,35 +18,23 @@ main {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr); }
   main .tituloh2 {
+    display: grid;
     grid-area: main;
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 2 /2;
-    justify-items: right;
-    align-self: center;
+    justify-items: center;
+    align-items: center;
     color: #f87800;
     position: relative;
-    left: 28%;
     font-style: italic;
     font-size: 180%; }
   main .marcaAgua {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: main;
     grid-column: 1/4;
-    grid-row: 1/1;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-self: center; }
-  main .encabezadosPage {
-    grid-area: main;
-    color: black;
-    font-size: 250%;
-    justify-content: center;
-    grid-area: main;
-    grid-column: 2/2;
-    grid-row: 1 /1;
-    justify-content: center;
-    align-items: center;
-    margin: 10px; }
+    grid-row: 1/1; }
   main .encabezadosPage {
     -webkit-animation: focus-in-expand-fwd 2s cubic-bezier(0.2, 0.46, 0.45, 0.94) both;
     animation: focus-in-expand-fwd 2s cubic-bezier(0.2, 0.46, 0.45, 0.94) both; }
@@ -54,11 +42,8 @@ main {
     font-style: italic;
     font-size: 130%;
     color: black;
-    display: grid;
-    grid-area: main;
-    grid-column: 2/3;
-    grid-row: 1/3;
-    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
     justify-content: right;
     align-items: flex-start; }
 
@@ -111,14 +96,17 @@ header {
   grid-template-rows: repeat(6, 1fr);
   justify-content: center; }
 
-.fotoNosotros {
-  display: grid;
-  grid-area: main;
-  grid-column: 1/1;
-  grid-row: 1/3;
+.encabezadosPage {
+  font-size: large;
+  color: black;
+  position: relative;
+  left: 10%;
+  font-style: italic;
+  font-size: 250%;
   justify-content: center;
-  align-content: center;
-  margin-top: 10px; }
+  margin: 3%;
+  padding: 0%;
+  border: 10%; }
 
 footer {
   grid-area: footer;
@@ -232,13 +220,36 @@ h4 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr); }
     main .tituloh2 {
+      display: flex;
+      flex-direction: row;
       grid-area: main;
       grid-column: 1/2;
-      grid-row: 1/1;
+      grid-row: 2/2;
       font-size: small; }
-    main .marcaAgua {
-      box-sizing: content-box;
-      max-width: 480px; }
+    main .contacto2 {
+      grid-area: main;
+      grid-column: 1/2;
+      grid-row: 2/2; }
+    main .contacto {
+      grid-area: main;
+      grid-column: 1/2;
+      grid-row: 1/1; }
+    main .fotoNosotros {
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+    main .parrafosGral {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      main .parrafosGral .encabezadosPage {
+        display: flex;
+        flex-direction: column; }
+      main .parrafosGral .marcaAgua {
+        display: flex;
+        max-width: 576px;
+        width: 100px;
+        height: 100px; }
   footer {
     grid-area: footer;
     grid-template-columns: repeat(2, 1fr);
@@ -255,7 +266,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "header header" "main main " "footer footer"; }
+    grid-template-areas: "header header" "main main " "main main " "main main " "footer footer"; }
   header img {
     grid-column: 1 /1;
     grid-row: 1 / 1;
@@ -271,25 +282,40 @@ h4 {
     grid-area: main;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr); }
-    main .tituloh2 {
-      grid-area: main;
-      grid-column: 1/2;
-      grid-row: 2 /2;
-      left: 0%;
-      font-size: small;
-      align-content: center;
-      justify-content: center; }
-    main img {
-      grid-area: main;
-      grid-column: 1/1;
-      grid-row: 1 /1;
-      max-width: 768px; }
+  .tituloh2 {
+    grid-area: main;
+    grid-column: 1/2;
+    grid-row: 2 /2;
+    font-size: small;
+    position: absolute; }
   .encabezadosPage {
     grid-area: main;
     grid-column: 1/2;
-    grid-row: 1 /1; }
-  .parrafosGral {
+    grid-row: 1 /1; } }
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .ocultar-.marcaAgua {
+    display: none; } }
+
+@media (max-width: 768px) {
+  .contacto2 {
+    grid-area: main;
+    grid-column: 1/2;
+    grid-row: 2/2; }
+  .contacto {
+    grid-area: main;
+    grid-column: 1/2;
+    grid-row: 1/1; }
+  .fotoNosotros {
+    max-width: 768px;
     grid-area: main;
     grid-column: 1/2;
     grid-row: 2/2;
-    margin-left: 5%; } }
+    margin-top: 0%; }
+  h3 {
+    grid-area: main;
+    grid-column: 1/2;
+    grid-row: 2/2;
+    margin: 0%; }
+  .marcaAgua {
+    max-width: 768px; } }

@@ -31,17 +31,53 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
-.tituloh2 {grid-area: main;
+.tituloh2 {
+    display: flex;
+    flex-direction: row;
+    grid-area: main;
     grid-column: 1/2; 
-        grid-row: 1/1;
+        grid-row: 2/2;
         font-size: small;
-        }
     
-.marcaAgua{
-    box-sizing: content-box;
-    max-width: 480px; 
-}}
+        }
 
+
+    .contacto2 {
+        grid-area: main;
+        grid-column: 1/2;
+        grid-row: 2/2;
+
+    }
+
+    .contacto {
+        grid-area: main;
+        grid-column: 1/2;
+        grid-row: 1/1;
+    }
+
+    .fotoNosotros {
+        display: flex;
+        flex-direction: column;
+    text-align: center;}
+
+.parrafosGral{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .encabezadosPage{
+        display: flex;
+    flex-direction: column;
+    }
+
+.marcaAgua{
+    display: flex;
+    max-width: 576px;
+    width: 100px;
+    height: 100px;
+}
+}
+    }
 
 footer {
     grid-area: footer;
@@ -51,7 +87,7 @@ footer {
         grid-column: 1/2;
         grid-row: 2/2;
      h4{grid-column: 1/1;
-        grid-row: 1/1;
-
-     }   
-    }}}
+        grid-row: 1/1; }   
+    }
+}
+}
